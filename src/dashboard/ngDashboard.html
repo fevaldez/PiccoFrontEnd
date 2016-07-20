@@ -1,0 +1,176 @@
+<div class="content container">
+	<div class="row">
+		
+		<div class="col-lg-3 col-md-6 col-xs-12">
+			<rd-widget-click ng-click="dash.clickModal('projects')">
+				<rd-widget-body classes="xsmall">
+					<div class="widget-icon blue pull-left">
+						<i class="fa fa-industry"></i>
+					</div>
+					<div class="title-slim">{{dash.projects.length}}</div>
+					<div class="comment">Obras</div>
+				</rd-widget-body>
+			
+		</rd-widget-click></div>
+		<div class="col-lg-3 col-md-6 col-xs-12">
+			<rd-widget-click ng-click="dash.clickModal('income')">
+				<rd-widget-body classes="xsmall">
+					<div class="widget-icon green pull-left">
+						<i class="fa fa-money"></i>
+					</div>
+					<div class="title-slim">{{(dash.totalIncome) || 0 | currency : "$" : 0}}</div>
+					<div class="comment">Ingresos</div>
+				</rd-widget-body>
+			</rd-widget-click>
+		</div>
+		<div class="col-lg-3 col-md-6 col-xs-12">
+			<rd-widget>
+				<rd-widget-body classes="xsmall">
+					<div class="widget-icon orange pull-left">
+						<i class="fa fa-list"></i>
+					</div>
+					<div class="title-slim">{{dash.receivables || 0 | currency : "$" : 0}}</div>
+					<div class="comment">Cartera</div>
+				</rd-widget-body>
+			</rd-widget>
+		</div>
+		<div class="col-lg-3 col-md-6 col-xs-12">
+			<rd-widget>
+				<rd-widget-body classes="xsmall">
+					<div class="widget-icon red pull-left">
+						<i class="fa fa-usd"></i>
+					</div>
+					<div class="title-slim">{{dash.payables || 0 | currency : "$" : 0}}</div>
+					<div class="comment">Cuentas por Pagar</div>
+				</rd-widget-body>
+			</rd-widget>
+		</div>
+
+	</div><!-- row -->
+
+	<div class="row">
+		<div class="col-lg-6">
+			<rd-widget>
+	      		<rd-widget-header class="widget-header-slim" icon="fa fa-industry" title="Obras">
+					<a ui-sref="companies">
+						Detalle <i class="fa fa-bars"></i>
+					</a>
+	      		</rd-widget-header>
+	      		<rd-widget-body classes="large-slim no-padding">
+					<div class="table-responsive">
+						<table ng-table="dash.projectTableParams" class="table table-condensed table-striped table-hover no-padding table-slim" show-filter="false">
+						<!-- <thead>
+					        <tr>
+					            <th ng-repeat="column in dash.columns" ng-show="column.visible" class="text-center sortable" ng-class="{
+					                    'sort-asc': dash.projectTableParams.isSortBy(column.field, 'asc'),
+					                    'sort-desc': dash.projectTableParams.isSortBy(column.field, 'desc')
+					                  }" ng-click="dash.projectTableParams.sorting(column.field, dash.projectTableParams.isSortBy(column.field, 'asc') ? 'desc' : 'asc')">
+					                {{column.title}}
+					            </th>
+					        </tr>
+						</thead>
+						<tbody>
+							
+						</tbody> -->
+						<!-- <tbody> -->
+						    <tr ng-repeat="curProj in $data" ng-dblclick="dash.projectDetails(curProj.id)">
+								<td title="'Proyecto'" style="width: 200px" sortable="'full_name'" filter="{'full_name':'text'}">
+					              {{curProj.full_name | titleCase | limitTo:55}}</td>
+								<td title="'Inicio'" sortable="'start_date'" filter="{'start_date':'text'}">
+					              {{curProj.start_date | dateToISO | date : 'MMM/yy' }}</td>
+								<td title="'Fin'" sortable="'end_date'" filter="{'end_date':'text'}">
+					              {{curProj.end_date | dateToISO | date : 'MMM/yy' }}</td>
+					            <td title="'Progreso'">
+					            	<uib-progressbar class="slim-progress-top" uib-tooltip="{{curProj.duration}} (dias)" animate="true" max="curProj.duration" value="curProj.lapsed" type="success"></uib-progressbar>
+					            	<uib-progressbar class="slim-progress" uib-tooltip="{{(curProj.income/curProj.budget)*100 || 0 | number:0}}%" animate="true" max="100" value="(curProj.income/curProj.budget)*100 || 0" type="primary"></uib-progressbar>
+					            </td>
+								<td title="'Ingreso'" sortable="'income'" filter="{'income':'text'}">
+									<span ng-class="{'color-red': curProj.income < curProj.outcome}">
+						              {{curProj.income - curProj.outcome || 0 | currency : "$" : 2}}
+						            </span>
+					            </td>
+						    </tr>
+						<!-- </tbody> -->
+						    <!-- <thead>
+						        <tr>
+						            <th ng-repeat="column in dash.columns" ng-show="column.visible" class="text-center sortable" ng-class="{
+						                    'sort-asc': dash.projectTableParams.isSortBy(column.field, 'asc'),
+						                    'sort-desc': dash.projectTableParams.isSortBy(column.field, 'desc')
+						                  }" ng-click="dash.projectTableParams.sorting(column.field, dash.projectTableParams.isSortBy(column.field, 'asc') ? 'desc' : 'asc')">
+						                {{column.title}}
+						            </th>
+						        </tr>
+					        </thead>
+					        <tbody>
+						        <tr ng-repeat="user in $data">
+						            <td ng-repeat="column in dash.columns" ng-show="column.visible" sortable="column.field">
+						                {{user[column.field][column.subfield]||  user[column.field]}}
+						            </td>
+						        </tr>
+						    </tbody> -->
+					    </table>
+					</div>
+				</rd-widget-body>
+			</rd-widget>
+		</div>
+
+		<div class="col-lg-6">
+			<rd-widget>
+				<rd-widget-header class="widget-header-slim" icon="fa-bank" title="Costos">
+					<a ui-sref="users">
+						Detalle <i class="fa fa-bank"></i>
+					</a>
+					<!-- <input class="col-lg-6" type="text" placeholder="Search" class="form-control input-sm"> -->
+				</rd-widget-header>
+	      		<rd-widget-body classes="large-slim no-padding">
+					<div class="table-responsive">
+						<table ng-table="dash.projectTableParams" class="table table-condensed table-striped table-hover no-padding table-slim" show-filter="false" show="true">
+						    <tr ng-repeat="curProj in $data">
+								<!-- <td title="'ID'" filter="{ id: 'text'}" sortable="'curProj.id'">
+					              {{curProj.id}}</td> -->
+								<td title="'Proyecto'" style="width: 200px" filter="{ nombre: 'text'}" sortable="'curProj.name'">
+					              {{curProj.full_name | titleCase | limitTo:63 }}</td>
+								<td title="'Presupuesto'" filter="{ monto: 'text'}" sortable="'curProj.budget'">
+					              {{curProj.budget || 0 | currency:"$":2}}</td>
+								<td title="'Comprado'" filter="{ monto: 'text'}" sortable="'curProj.budget'">
+					              {{curProj.budget || 0 | currency:"$":2}}</td>
+								<td title="'Gastado'" filter="{ monto: 'text'}" sortable="'curProj.budget'">
+					              {{curProj.outcome || 0 | currency:"$":2}}</td>
+								<td title="'Dif'" filter="{ monto: 'text'}" sortable="'curProj.budget'">
+					              {{ 0 | currency:"$":2}}</td>
+						    </tr>
+					    </table>
+	        		</div>
+				</rd-widget-body>
+			<rd-widget>
+		</rd-widget></rd-widget></div>
+	</div><!-- row -->
+
+	<!-- 3rd row on Dashboard -->
+	<div class="row">
+
+		<div class="col-lg-6">
+			<rd-widget>
+				<rd-widget-body classes="xsmall">
+					<div class="widget-icon red pull-left">
+						<i class="fa fa-usd"></i>
+					</div>
+					<div class="title-slim">{{dash.payments || 0 | currency : "$" : 2}}</div>
+					<div class="comment">Pagos</div>
+				</rd-widget-body> <!-- widget-body -->
+			</rd-widget><!-- rd-widget -->
+		</div><!-- col-lg-6 -->
+
+		<div class="col-lg-6">
+			<rd-widget>
+				<rd-widget-body classes="xsmall">
+					<div class="widget-icon blue pull-left">
+						<i class="fa fa-usd"></i>
+					</div>
+					<div class="title-slim">{{ 0 | currency : "$" : 2}}</div>
+					<div class="comment">Estimaciones</div>
+				</rd-widget-body> <!-- widget-body -->
+			</rd-widget><!-- rd-widget -->
+		</div><!-- col-lg-6 -->		
+	</div><!-- row -->
+</div><!-- content container -->

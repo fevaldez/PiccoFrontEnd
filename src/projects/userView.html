@@ -1,0 +1,43 @@
+<!-- public/views/userView.html -->
+
+<div class="content container">
+  <div class="col-sm-4">
+    <rd-widget>
+      <rd-widget-header icon="fa fa-menu" title="Proyectos">
+      </rd-widget-header>
+      <rd-widget-body classes="no-padding">
+        <div class="table-responsive">
+          <!-- <uib-accordion>
+            <uib-accordion-group heading="{{project.Proyecto}} - {{project.fechaInicio | dateToISO | date}}" ng-repeat="project in user.users">
+              <b>Fecha Inicio: </b><span>{{project.fechaInicio | limitTo:10}}</span>
+            </uib-accordion-group>
+          </uib-accordion> -->
+          <ul class="heroes">
+            <li class="hero" ng-repeat="project in user.users">
+              <a href="#/detail/{{project.id}}"> 
+              <span class="badge">{{project.id}}</span> {{project.Proyecto}}
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </rd-widget-body>
+    </rd-widget>
+  </div><!-- col-sm-12 -->
+
+  <div class="col-sm-8">
+    Detail
+    <!-- <div ng-view></div> -->
+    <div class="jumbotron" ng-show="detail.pt">
+    ID: {{pt.id}}
+    <BR/>
+    <h3>{{pt.Proyecto}}</h3>
+    <div class="text-danger">
+      {{pt.monto}}
+    </div>
+  </div>
+  <div class="jumbotron" ng-hide="detail.pt">
+    Select user from list
+  </div> 
+  </div>
+</div><!-- content container -->

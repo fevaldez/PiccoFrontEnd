@@ -4,28 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>RDash AngularJS</title>
+	<title>Sistema SIE</title>
   <!-- STYLES -->
   <!-- build:css lib/css/main.min.css -->
   <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.min.css">
+  <link rel="stylesheet" type="text/css" href="app-styles/animate.css">
+  <link rel="stylesheet" type="text/css" href="components/angular-growl-v2/build/angular-growl-modified.css">
+  <link rel="stylesheet" type="text/css" href="components/ui-select/dist/select.css">
+  <link rel="stylesheet" type="text/css" href="components/angular-loading-bar/build/loading-bar.css">
+  <link rel="stylesheet" type="text/css" href="app-styles/select2.css">
+  <link rel="stylesheet" type="text/css" href="app-styles/selectize.default.css">
+  <link rel="stylesheet" type="text/css" href="app-styles/select2-bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="app-styles/main.css">
+  <link rel="stylesheet" type="text/css" href="app-styles/pe-icon-7-stroke.css">
+  <link rel="stylesheet" type="text/css" href="app-styles/ct-navbar.css">
   <!-- endbuild -->
   <!-- SCRIPTS -->
   <!-- build:js lib/js/main.min.js -->
+  <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="components/underscore/underscore.js"></script>
   <script type="text/javascript" src="components/angular/angular.min.js"></script>
   <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
   <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="components/satellizer/satellizer.min.js"></script>
+  <script type="text/javascript" src="components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="components/ng-table/dist/ng-table.js"></script>
+  <script type="text/javascript" src="components/angular-growl-v2/build/angular-growl.min.js"></script>
+  <script type="text/javascript" src="components/angular-modal-service/dst/angular-modal-service.min.js"></script>
+  <script type="text/javascript" src="components/moment/moment.js"></script>
+  <script type="text/javascript" src="components/angular-moment/angular-moment.js"></script>
+  <script type="text/javascript" src="components/ui-select/dist/select.js"></script>
+  <script type="text/javascript" src="components/angular-loading-bar/build/loading-bar.js"></script>
+  <!-- <script type="text/javascript" src="app-scripts/ctNavbar/ct-navbar.js"></script> -->
+  <!-- <script type="text/javascript" src="app-scripts/picco/picco.js"></script> -->
   <!-- endbuild -->
   <!-- Custom Scripts -->
   <script type="text/javascript" src="js/dashboard.min.js"></script>
 </head>
 <body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
 
     <!-- Sidebar -->
-    <div id="sidebar-wrapper">
+    <!-- <div id="sidebar-wrapper">
       <ul class="sidebar">
         <li class="sidebar-main">
           <a ng-click="toggleSidebar()">
@@ -35,10 +59,16 @@
         </li>
         <li class="sidebar-title"><span>NAVIGATION</span></li>
         <li class="sidebar-list">
-          <a href="#">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
+          <a href="#/">Dashboard <span class="menu-icon fa fa-tachometer"></span></a>
         </li>
         <li class="sidebar-list">
           <a href="#/tables">Tables <span class="menu-icon fa fa-table"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/companies">Tables <span class="menu-icon fa fa-building"></span></a>
+        </li>
+        <li class="sidebar-list">
+          <a href="#/users">Tables <span class="menu-icon fa fa-users"></span></a>
         </li>
       </ul>
       <div class="sidebar-footer">
@@ -58,80 +88,97 @@
           </a>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- End Sidebar -->
 
-    <div id="content-wrapper">
-      <div class="page-content">
+         <!-- NAV Bar -->
+    <!-- <div id="content-wrapper">
+      <div class="page-content"> -->
+    <nav ng-hide="$state.current.name === 'auth'" class="navbar navbar-ct-green navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapse" data-toggle="bs-example-navbar-collapse-1"
+          data-target="#collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand navbar-brand-logo" href="/#">
+                <span class="brand">Pico</span>
+                <div class="logo">
+                    <img src="img/Picco-Logo (Custom).png">
+                </div>
+                <span class="brand"> SIE</span>
+              </a>
+        </div><!-- navbar-header -->
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left">
+              <li>
+                  <a href="#/dashboard"                    
+                    uib-tooltip="Dashboard" tooltip-placement="bottom">
+                      Dashboard
+                  </a>
+              </li>
+              
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  Estado de Resultado <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" ui-sref="status">Estado de Resultado Anual</a></li>
+                </ul>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" ui-sref="status">Estado de Resultado por Fechas</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  Reportes <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a tabindex="-1" ui-sref="obras">Resultado de Obra</a></li>
+                </ul>
+              </li>
 
-        <!-- Header Bar -->
-        <div class="row header">
-          <div class="col-xs-12">
-            <div class="user pull-right">
-              <div class="item dropdown" uib-dropdown>
-                <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                  <img src="img/avatar.jpg">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Joe Bloggs
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Profile
-                    </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Menu Item
-                    </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Menu Item
-                    </a>
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="item dropdown" uib-dropdown>
-               <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                  <i class="fa fa-bell-o"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Notifications
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="#">Server Down!</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="meta">
-              <div class="page">
-                Dashboard
-              </div>
-              <div class="breadcrumb-links">
-                Home / Dashboard
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Header Bar -->
+              <!-- <li>
+                  <a href="#"
+                    uib-tooltip="Messages" tooltip-placement="bottom">
+                      <i class="fa fa-bell-o">
+                      </i><span class="redlight">9</span>
+                  </a>
+              </li> -->
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                  Bienvenido
+                  <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a tabindex="-1" href=""><span class="fa fa-user"></span> Perfil</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" ui-sref="auth"><span class="fa fa-sign-out"></span> Logout</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </div><!-- navbar-collapse collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+        <!-- End NAV Bar -->
 
         <!-- Main Content -->
-        <div ui-view></div>
+        <div ng-view class="fadeInUp">
+          <div growl></div>
+        </div>
 
-      </div><!-- End Page Content -->
-    </div><!-- End Content Wrapper -->
-  </div><!-- End Page Wrapper -->
+        <div class="full-height" ui-view>
+        </div>
+
+    <!--   </div><!-- End Page Content -->
+    <!-- </div>End Content Wrapper -->
 </body>
 </html>

@@ -1,0 +1,851 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getUsers"
+			],
+			[
+				"ini",
+				"initCompaniesTable〔function〕"
+			],
+			[
+				"dash",
+				"dashboard"
+			],
+			[
+				"rejec",
+				"rejection"
+			],
+			[
+				"in",
+				"injector"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"han",
+				"handleError"
+			],
+			[
+				"Aut",
+				"AuthService〔argument〕"
+			],
+			[
+				"com",
+				"company_id"
+			],
+			[
+				"Comp",
+				"CompanyService〔argument〕"
+			],
+			[
+				"edite",
+				"editedUser〔argument〕"
+			],
+			[
+				"edi",
+				"editedUserId〔argument〕"
+			],
+			[
+				"ed",
+				"editedUserId"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"100",
+				"10000"
+			],
+			[
+				"comp",
+				"company〔variable〕"
+			],
+			[
+				"res",
+				"response〔argument〕"
+			],
+			[
+				"Modal",
+				"ModalService〔argument〕"
+			],
+			[
+				"pr",
+				"promise"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"modal",
+				"modalResult"
+			],
+			[
+				"show",
+				"showModal〔function〕"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"compa",
+				"company"
+			],
+			[
+				"myModal",
+				"myModalFactory〔function〕"
+			],
+			[
+				"succes",
+				"successfully"
+			],
+			[
+				"succ",
+				"success"
+			],
+			[
+				"handle",
+				"handleSuccess〔variable〕"
+			],
+			[
+				"Com",
+				"CompanyService〔argument〕"
+			],
+			[
+				"timeout",
+				"timeout"
+			],
+			[
+				"store",
+				"storeCompany"
+			],
+			[
+				"Succ",
+				"Successful"
+			],
+			[
+				"Lo",
+				"LoginController"
+			],
+			[
+				"comap",
+				"company"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"set",
+				"setEditedUser"
+			],
+			[
+				"Compa",
+				"CompanyService"
+			],
+			[
+				"cm",
+				"company"
+			],
+			[
+				"C",
+				"CompanyService"
+			],
+			[
+				"edited",
+				"editedUser"
+			],
+			[
+				"first",
+				"first_name"
+			],
+			[
+				"firs",
+				"first_name"
+			],
+			[
+				"tabl",
+				"tableParams"
+			],
+			[
+				"ta",
+				"tableParams"
+			],
+			[
+				"hydra",
+				"$hydration_amount〔variable〕"
+			],
+			[
+				"g",
+				"gender"
+			],
+			[
+				"User",
+				"UsersService"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"gr",
+				"gridOptions"
+			],
+			[
+				"gir",
+				"gridOpts"
+			],
+			[
+				"company",
+				"companyId"
+			],
+			[
+				"Create",
+				"CreateUserRequest〔namespace〕"
+			],
+			[
+				"Company",
+				"CompanySeed"
+			],
+			[
+				"Au",
+				"Authenticatable"
+			],
+			[
+				"HE",
+				"HEADER	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/index.html",
+			"settings":
+			{
+				"buffer_size": 7751,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/dashboard/dashboardController.js",
+			"settings":
+			{
+				"buffer_size": 4617,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/dashboard/ngDashboard.html",
+			"settings":
+			{
+				"buffer_size": 5679,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app-styles/main.css",
+			"settings":
+			{
+				"buffer_size": 13712,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/module.js",
+			"settings":
+			{
+				"buffer_size": 3587,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 219.0,
+		"last_filter": "git:add",
+		"selected_items":
+		[
+			[
+				"git:add",
+				"Git: Add Current File"
+			],
+			[
+				"git:a",
+				"Git: Add Current File"
+			],
+			[
+				"git:sta",
+				"Git: Diff Staged Files"
+			],
+			[
+				"git:di",
+				"Git: Diff All Files"
+			],
+			[
+				"git",
+				"Git: Diff Current File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"dir",
+			"ls",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/FrontEnd",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/FrontEnd/src",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/FrontEnd/src/dashboard",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/FrontEnd/src/modal"
+	],
+	"file_history":
+	[
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/index.html",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/FrontEnd/gulpfile.js",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Http/routes.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/.env",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Project.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Http/Controllers/ProjectController.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/composer.json",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/.gitignore",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Http/Controllers/AuthenticateController.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Http/Middleware/VerifyCsrfToken.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Http/Kernel.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/config/jwt.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/config/jwt.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/config/app.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/config/app.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Providers/AppServiceProvider.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/composer.json",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/app/Providers/AppServiceProvider.php",
+		"/C/Users/pipexz/Documents/AWS/Picco/Code/PiccoAPI/app/Projects.php",
+		"/C/xampp/htdocs/PiccoAPI/.gitignore",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/.env",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-styles/main.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-styles/ct-navbar.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/js/module.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/gulpfile.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/dashboard/ngDashboard.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/dashboard/dashboardController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/js/routes.js",
+		"/C/xampp/htdocs/SanoAPI/resources/views/index.php",
+		"/C/xampp/htdocs/PiccoAPI/composer.json",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/js/controllers/master-ctrl.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-services/authentication.service.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/login/authController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/company/companyController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/user/userController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/company/companyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/templates/dashboard.html",
+		"/C/Users/pipexz/AppData/Local/Temp/Rar$DR73.971/navbar.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/components/angular-growl-v2/build/angular-growl-modified.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/dist/index.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-fonts",
+		"/C/Users/pipexz/AppData/Local/Temp/Rar$DR37.30608/css/ct-navbar.css",
+		"/C/Users/pipexz/AppData/Local/Temp/Rar$DR37.43372/css/bootstrap.css",
+		"/C/xampp/htdocs/SanoAPI/public/scripts/app.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-styles/custom.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/components/satellizer/satellizer.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/components/satellizer/README.md",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/components/satellizer/bower.json",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/modal/customModal.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/user/userView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/company/companyService.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/user/newUserView.html",
+		"/C/xampp/htdocs/SanoAPI/public/genericMessages.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/components/ui-select/dist/select.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-styles/select2.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/dist/css/main.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/js/directives/widget-body.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/dist/templates/newCompanyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/dist/templates/companyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/company/editCompanyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/company/newCompanyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/dist/Error500.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/modal/imodalService.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/components/angular-modal-service/dst/angular-modal-service.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/modal/modalController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/dist/templates/customModal.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/bower.json",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/resources/views/index.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/js/directives/loading.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/modal/customModalService.js",
+		"/C/xampp/htdocs/SanoAPI/public/package.json",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/dist/css/animate.css",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-services/flash.service.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-scripts",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/login/loginView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/login/authController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/.bowerrc",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/package.json",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/login/login.controller.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-scripts/routes.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoFrontEnd/app/sanoApp.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/scripts/app.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/views/userView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/app/Http/Controllers/CompanyUsersController.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/app/Http/Controllers/CompanyController.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/scripts/userController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/company/companyService.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/company/companyController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/views/editUserView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/company/companyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/user/usersService.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/modal/customModalService.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/modal/modalService.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/company/editCompanyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/modal/customModal.html",
+		"/C/xampp/htdocs/SanoAPI/public/user/usersService.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/modal/modal.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/company/newCompanyView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/app/Http/Middleware/VerifyCsrfToken.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/scripts/authController.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/app/Http/Controllers/AuthenticateController.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/app/User.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/public/views/userDetailsView.html",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/FrontEnd/src/app-directives/landing.navBar.directive.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/satellizer/satellizer.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/satellizer/satellizer.min.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/bootstrap/dist/css/bootstrap.min.css",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/bootstrap/dist/css/bootstrap.css",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-router/release/angular-ui-router.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-router/release/angular-ui-router.min.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-grid/ui-grid.min.css",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-grid/ui-grid.min.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-grid/ui-grid.css",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-grid/ui-grid.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-messages/angular-messages.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-messages/angular-messages.min.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-messages/angular-messages.min.js.map",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-animate/angular-animate.min.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-animate/angular-animate.min.js.map",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular-animate/angular-animate.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular/angular.min.js",
+		"/C/xampp/htdocs/SanoAPI/public/node_modules/angular/angular.js",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/database/seeds/UserSeed.php",
+		"/C/Users/pipexz/Documents/AWS/Sano/Code/SanoAPI/app/Http/Requests/CreateUserRequest.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\pipexz\\Documents\\AWS\\Sano\\Code\\FrontEnd\\src",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"slim-progress",
+			"progress",
+			"tableParams",
+			"'dashboard'",
+			"AuthController",
+			"/dash",
+			"margin-top: 10px",
+			"100px",
+			"width:100",
+			"width: 100",
+			"logo",
+			"icon",
+			"blue",
+			"height",
+			"navbar",
+			"navbar-",
+			"navbar-custom",
+			"bootstrap",
+			"//",
+			"98C993",
+			"98c993",
+			"intercep",
+			"companiesArray",
+			"editUser",
+			"fade",
+			"vm.itemArray",
+			"selectedItem",
+			"theme",
+			"select2",
+			"timeout",
+			"$scope.",
+			"Company",
+			"EditedCompany",
+			"newUser",
+			"paginati",
+			"exception",
+			"RDash",
+			"timeout",
+			"storeCompany",
+			"storecompany",
+			"../company/",
+			"components",
+			"alert",
+			"modal",
+			"debug",
+			"CompanyService",
+			"companyForm.lastName",
+			"companyForm.firstName",
+			"company.newCompany",
+			".lastName.",
+			".firstName.",
+			"user.newUser.",
+			"userForm",
+			"console",
+			"();",
+			"newUser",
+			"user.",
+			"/p>",
+			"<p",
+			"userFirstName",
+			"exampleForm",
+			"controller",
+			"<?php\n",
+			"JWTAuth",
+			"52.",
+			"public",
+			"54.",
+			"NotFoundHttpException",
+			"HttpNotFoundException",
+			"AuthenticateWithBasic",
+			"422",
+			"User",
+			"Authenticatable",
+			"BaseController",
+			";\n",
+			"Authenticatable",
+			"composer"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"companyTableParams",
+			"DashboardController",
+			"vm.companiesArray",
+			"vm.",
+			"User",
+			"EditedUser",
+			"templates/",
+			"ModalService",
+			"companyForm.description",
+			"companyForm.name",
+			"company.editedCompany",
+			".description.",
+			".name.",
+			"company.newCompany.",
+			"companyForm",
+			"user.newUser.",
+			"/div>",
+			"<div",
+			"firstName",
+			"userForm"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/dashboard/dashboardController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3997,
+								3997
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 936.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/dashboard/ngDashboard.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2942,
+								2955
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 900.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app-styles/main.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 13712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9097,
+								8951
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7299.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/js/module.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 165.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 81.0
+	},
+	"pinned_build_system": "",
+	"project": "Picco-FrontEnd.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git",
+				"vendor\\monolog\\monolog\\src\\Monolog\\Processor\\GitProcessor.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -3,9 +3,9 @@
  */
 
 angular.module('RDash')
-    .controller('MasterCtrl', ['$scope', '$cookieStore', MasterCtrl]);
+    .controller('MasterCtrl', ['$scope', '$state', '$cookieStore', 'AuthService', 'growl', MasterCtrl]);
 
-function MasterCtrl($scope, $cookieStore) {
+function MasterCtrl($scope, $state, $cookieStore, AuthService, growl) {
     /**
      * Sidebar Toggle & Cookie Control
      */
@@ -14,6 +14,23 @@ function MasterCtrl($scope, $cookieStore) {
     $scope.getWidth = function() {
         return window.innerWidth;
     };
+
+    $scope.logout = function() {
+    
+        AuthService.logout()
+            .then(function(response) {
+                console.log(response);
+                if (response.success){
+                    $state.go('auth', {});
+                }else{
+                    growl.error(response.message, {ttl: 5000});
+                }
+
+        }, function(error) {
+            console.log(error);
+        });
+    
+    }
 
     $scope.$watch($scope.getWidth, function(newValue, oldValue) {
         if (newValue >= mobileView) {

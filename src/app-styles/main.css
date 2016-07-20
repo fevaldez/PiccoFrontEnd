@@ -1,0 +1,709 @@
+html, body, .full-height {
+    height: 100%;
+}
+body {
+    color: #73879C;
+    padding-top: 61px;
+    /*#ECF0F1; #FCFCFC
+
+    //background: #2A3F54;
+    //background: #98C993; GREEN
+    background: #109173; //AQUA
+    */
+    
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    /*
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.471;
+	*/
+}
+#well2 {
+    height: 80%;
+    margin-bottom: 0;
+    overflow: auto;
+}
+/* Some additional styling to demonstrate that append-to-body helps achieve the proper z-index layering. */
+.select-box {
+  background: #fff;
+  position: relative;
+  z-index: 10000;
+}
+.alert-info.positioned {
+  margin-top: 1em;
+  position: relative;
+  z-index: 10000; /*// The select2 dropdown has a z-index of 9999*/
+}
+/*.selectize-input,
+.selectize-dropdown {
+    z-index: 10000;
+}*/
+
+.center-block-logo {
+    border-radius: 50%;
+    width: 180px;
+}
+
+/*NG-TABLE Override*/
+.pagination {
+  margin: 0px;
+}
+
+
+/*Override <ul class="heroes">*/
+ .selected {
+      background-color: #CFD8DC !important;
+      color: white;
+    }
+    .heroes {
+      margin: 0 0 2em 0;
+      list-style-type: none;
+      padding: 0;
+      /*width: 15em;*/
+    }
+    .heroes li {
+      cursor: pointer;
+      position: relative;
+      left: 0;
+      background-color: #EEE;
+      margin: .5em;
+      padding: .3em 0;
+      height: 1.7em;
+      border-radius: 4px;
+    }
+    .heroes li a {
+      text-decoration: none;
+      color: inherit;
+      /*cursor: hand;*/
+    }
+    .heroes li.selected:hover {
+      background-color: #BBD8DC !important;
+      color: white;
+    }
+    .heroes li:hover {
+      color: #607D8B;
+      background-color: #DDD;
+      left: .1em;
+    }
+    .heroes .text {
+      position: relative;
+      top: -3px;
+    }
+    .heroes .badge {
+      display: inline-block;
+      font-size: small;
+      color: white;
+      padding: 0.8em 0.7em 0 0.7em;
+      background-color: #607D8B;
+      line-height: 1em;
+      position: relative;
+      left: -1px;
+      top: -4px;
+      height: 1.8em;
+      margin-right: .8em;
+      border-radius: 4px 0 0 4px;
+    }
+
+    /* items class */
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 24em;
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.items li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.items li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+
+.items li.selected:hover {
+  background-color: #BBD8DC;
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+.items .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+/*  This CSS is exclusively for our Master-Detail view examples */
+#divMasterDetailWrapper
+{
+    width: 95%;
+    height: 300px;
+    border: 1px solid Green;
+    padding: 3px;
+    margin: 15px 5px 15px 30px;
+}
+#divMasterView
+{
+    width: 300px;
+    height: 300px;
+    background-color: #E0E0E0;
+    margin-right: 5px;
+    overflow-y: auto;
+    float: left;
+}
+#divDetailView
+{
+    height: 300px;
+
+    /* Fadey background CSS, created with: http://www.colorzilla.com/gradient-editor/ */
+    background: #c6ffc6; /* Old browsers */
+    background: -moz-linear-gradient(top,  #c6ffc6 0%, #f2fff2 51%, #c6ffc6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c6ffc6), color-stop(51%,#f2fff2), color-stop(100%,#c6ffc6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #c6ffc6 0%,#f2fff2 51%,#c6ffc6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #c6ffc6 0%,#f2fff2 51%,#c6ffc6 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #c6ffc6 0%,#f2fff2 51%,#c6ffc6 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #c6ffc6 0%,#f2fff2 51%,#c6ffc6 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6ffc6', endColorstr='#c6ffc6',GradientType=0 ); /* IE6-9 */
+
+    padding: 0;
+    overflow-y: auto;
+}
+
+/*  
+ *   This is the CSS for one Customer record, in our Master view 
+ *
+ *   Each Customer record will have one overall <div> element, with one sub-<div> for each Customer field 
+ *   that we want to display.
+ * 
+ *   For example, the Customer City values will all be added to the DOM with a CSS class of "cssCompanyCity",
+ *   which sets their position in the "Customer" <div> to (23px, 40px)
+ */
+.cssOneCompanyRecord {
+    height: 47px;
+    width: 98%;
+    position: relative;         /* Very important, for appending child <div>s with absolute positioning later */
+    border-bottom: 1px solid white;
+}
+.cssOneCompanyRecord:hover
+{
+    background-color: #547896;
+    cursor: pointer;
+}
+.cssCompanySelectedRecord {
+    /*  If this Company record has been selected, we'll display a Red vertical bar next to it */
+    border-left: 2px solid Red;
+    background-color: white;
+}
+.cssCompanyName
+{
+    position:absolute;
+    top: 5px;
+    left: 40px;
+}
+.cssCompanyCity
+{
+    position:absolute;
+    top: 23px;
+    left: 40px;
+    color: #505050;
+    font-size: 0.9em;
+}
+.cssCustomerID
+{
+    position:absolute;
+    top: 31px;
+    right: 5px;
+    font-size: 0.7em;
+    color: blue;
+}
+.cssCustomerIcon
+{
+    position:absolute;
+    top: 12px;
+    left: 7px;
+    width: 24px;
+    height: 24px;
+}
+    
+/*  
+ *   This is the CSS for one "Order" record, in our Detail view 
+ *
+ *   This one's a little more complicated, as, for each "Order", we'll have an Order Header, followed by a
+ *   collection of "Product" <div>s in that order.
+ * 
+ *   But, the theory is just the same.  Each "Product" values gets added to the DOM with a particular CSS class
+ *   to allow us to set their position in the "Product" <div>.
+ */
+
+.cssOneOrderRecord
+{
+    width: 90%;
+    position: relative;         /* Very important, for appending child <div>s with absolute positioning later */
+    padding: 5px;
+    border-bottom: 1px solid white;
+    background-color: white;
+    border: 1px solid #404040;
+    margin: 15px 20px 15px 20px;
+    overflow: no-display;
+}
+.cssOneOrderHeader {
+    /*height: 40px;*/
+    background-color: #E0E0E0;
+    width: 100%;
+    position: relative;
+    margin: 0px 0px 4px 0px;
+
+    background-image: url(/images/icnOrder.png);
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+}
+.cssOrderID
+{
+    /*position:absolute;*/
+    left: 75px;
+    top: 10px;
+    font-weight: bold;
+}
+.cssOrderDate
+{
+    /*position:absolute;*/
+    left: 300px;
+    top: 10px;
+}
+.cssOneProductRecord
+{
+    width: 100%;
+    height: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.cssOneProductQty
+{
+    position:absolute;
+    left: 30px;
+    top: 5px;
+}
+.cssOneProductName
+{
+    position:absolute;
+    left: 100px;
+    top: 5px;
+}
+.cssOneProductPrice
+{
+    position:absolute;
+    left: 300px;
+    top: 7px;
+}
+.cssOneProductSubtotal {
+    position:absolute;
+    left: 420px;
+    top: 7px;
+    overflow: hidden;
+    height: 20px;
+}
+.cssOneOrderTotal {
+    width: 100%;
+    height: 32px;
+    position: relative;
+    background-color: #e0e0e0;
+    margin: 10px 0px 4px 0px;
+    font-weight: bold;
+    border-top: dashed 1px black;
+    overflow: hidden;
+}
+
+.cssProductEven {
+    background-color: white;
+}
+.cssProductOdd {
+    background-color: #F0F8F8;
+}
+
+/*Angular-Loading-Bar*/
+#loading-bar .bar {
+  -webkit-transition: width 350ms;
+  -moz-transition: width 350ms;
+  -o-transition: width 350ms;
+  transition: width 350ms;
+
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+#loading-bar-spinner {
+  display: block;
+  position: absolute;
+  right: 10px;
+  left: auto;
+  top: 51px;
+  bottom: -20px;
+  z-index: 2000;
+}
+
+
+/*
+  *BOOTSTRAP OVERRIDE
+*/
+/*List Group*/
+.list-special .list-group-item.active:hover,{
+  color: black;
+  background-color: #aed248;
+  border-color: #aed248;
+}
+.list-special .list-group-item.active {
+  color: black;
+  background-color: #dbdbdb;
+  border-color: #dbdbdb;
+}
+.list-special .list-group-item.active p.list-special .list-group-item.active:hover p {
+  color: black;
+}
+.list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text,
+ .list-group-item.active:hover .list-group-item-text{
+  color: black;
+ }
+ 
+ /* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/*
+  *CUSTOM Progress Bar
+*/
+.slim-progress {
+  height: 10px;
+  margin-bottom: 10px;
+}
+.slim-progress-top{
+  height: 10px;
+  margin-bottom: 0px;
+}
+
+/*
+  *CUSTOM Widgets
+*/
+.widget{
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+  box-shadow: 0 4px 6px rgba(0,0,0,.3);
+}
+.widget-click{
+  cursor: pointer;
+}
+
+.widget-header-slim {
+  /*padding: 5px 10px 1px 10px;*/
+  line-height: 25px;
+  font-size: 16px;
+}
+.widget-body.large-slim {
+  height: 310px;
+}
+/*.widget .widget-body {
+    padding: 10px;
+}*/
+.widget .widget-body.xsmall {
+  padding: 10px;
+  height: 85px;
+  overflow-y: auto;
+}
+.widget .widget-content .title-slim {
+  font-size: 25px;
+  display: block;
+}
+
+/*
+  *CUSTOM Bootstrap Tables
+*/
+.table-slim {
+  margin-bottom: 10px;
+}
+.table-slim tr {
+  height: 41px;
+}
+.row > div {
+  margin-bottom: 10px; 
+}
+
+.thumb {
+  /*
+  display: inline;
+  float: left;
+  margin: 0 15px 30px;
+  padding: 10px 10px 15px;
+  text-align: center;*/  
+  max-width: 100%;
+  max-height: 100%;
+  background: white;
+  margin-bottom: 6px;
+  text-decoration: none;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  -moz-box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  transition: all .15s linear;
+  overflow-y: auto;
+  /*z-index:0;*/
+}
+
+.zero-padding {
+  padding: 0px;
+}
+
+
+/*
+  *CUSTOM Animations
+*/
+.my-repeat-animation.ng-enter, 
+.my-repeat-animation.ng-leave {
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  position:relative;
+}
+
+.my-repeat-animation.ng-enter-stagger {
+  /* 100ms will be applied between each sucessive enter operation */ 
+  -webkit-transition-delay:0.1s;
+  transition-delay:0.1s;
+
+  /* this is here to avoid accidental CSS inheritance */
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
+
+.my-repeat-animation.ng-enter {
+  opacity:0;
+}
+.my-repeat-animation.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.my-repeat-animation.ng-leave {
+  opacity:1;
+}
+.my-repeat-animation.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+/*
+Colors
+*/
+.color-green {
+  color: green;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-red {
+  color: red;
+}
+
+/*
+BOOTSTRAP TABLES
+*/
+/*Table Hover*/
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #E5E4E2;
+}
+
+table tr .strong{
+  font-weight: bold;
+}​
+
+/*!
+// CSS only Responsive Tables
+// http://dbushell.com/2016/03/04/css-only-responsive-tables/
+// by David Bushell
+*/
+
+.rtable {
+  /*!
+  // IE needs inline-block to position scrolling shadows otherwise use:
+  // display: block;
+  // max-width: min-content;
+  */
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  max-height: 100%;
+  
+  overflow-x: auto;
+  
+  // optional - looks better for small cell values
+  white-space: nowrap;
+
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.rtable,
+.rtable--flip tbody {
+  // optional - enable iOS momentum scrolling
+  -webkit-overflow-scrolling: touch;
+  
+  /*// scrolling shadows*/
+  background: radial-gradient(left, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 0 center,
+              radial-gradient(right, ellipse, rgba(0,0,0, .2) 0%, rgba(0,0,0, 0) 75%) 100% center;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+}
+
+/*// change these gradients from white to your background colour if it differs*/
+/*// gradient on the first cells to hide the left shadow*/
+.rtable td:first-child,
+.rtable--flip tbody tr:first-child {
+  background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+
+// gradient on the last cells to hide the right shadow
+.rtable td:last-child,
+.rtable--flip tbody tr:last-child {
+  background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+
+.rtable th {
+  font-size: 11px;
+  text-align: left;
+  text-transform: uppercase;
+  background: #f2f0e6;
+}
+
+.rtable th,
+.rtable td {
+  padding: 6px 12px;
+  border: 1px solid #d9d7ce;
+}
+
+.rtable--flip {
+  display: flex;
+  overflow: hidden;
+  background: none;
+}
+
+.rtable--flip thead {
+  display: flex;
+  flex-shrink: 0;
+  min-width: min-content;
+}
+
+.rtable--flip tbody {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.rtable--flip tr {
+  display: flex;
+  flex-direction: column;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+
+.rtable--flip td,
+.rtable--flip th {
+  display: block;
+}
+
+.rtable--flip td {
+  background-image: none !important;
+  // border-collapse is no longer active
+  border-left: 0;
+}
+
+// border-collapse is no longer active
+.rtable--flip th:not(:last-child),
+.rtable--flip td:not(:last-child) {
+  border-bottom: 0;
+}
+
+#nested-table{
+    margin-bottom: 0px;
+}
+#expanded-data {
+    margin-left: 5px;
+}
+#top-row {
+ top: 61px;
+ position: fixed;
+ /*background-color: #fff;
+ height: 40px;*/
+ z-index: 1020;
+ width: 100%;
+ }
+#second-row {
+ top: 181px;
+ position: fixed;
+ height: 100%;
+ width: 100%;
+ }

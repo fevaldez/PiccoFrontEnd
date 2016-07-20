@@ -1,0 +1,222 @@
+<script type="text/ng-template" id="tree_item.html">
+<div class="row">
+	<!-- <tr style="width:100%">-->
+        <td style="width:10px">
+        	<i class="fa" ng-class="data.folderClass" ng-click="acc.toggleChildren(data)"></i>
+        </td>
+        <td colspan="3">
+            <div class="col-lg-2">
+            	{{data.account}}
+            </div>
+            <div class="col-lg-8">
+            	{{data.description}}
+            </div>
+            <div class="pull-right">
+            	{{data.balance | currency : "$" : 2}}
+            </div>
+            <div class="" id="expanded-data" ng-if="data.childrenVisible">
+            	<table class="table table-striped" id="nested-table">
+                
+                        <!--
+                	<tr>
+                		<td colspan="5">
+                        <div class="" ng-repeat="data in data.childs" ng-include="'tree_item.html'"></div>
+                        -->
+                        <tr ng-repeat="data in data.childs" ng-include="'tree_item.html'"></tr>
+
+                        <!--
+                		</td>
+                    </tr>
+                    -->
+                </table>
+            </div>
+    
+    	</td>
+    <!--</tr>-->
+</div>
+</script>
+<div class="content container">
+	<div class="row">
+		<div class="col-lg-2">
+    		<!-- <input type="text" class="form-control" uib-datepicker-popup="yyyymm" ng-model="date" min-mode="month" /> -->
+	        <p class="input-group">
+	          <input type="text" class="form-control" uib-datepicker-popup="yyyymm" min-mode="month" ng-model="acc.statusStartDate" is-open="acc.popupStart.opened" close-text="Close" alt-input-formats="altInputFormats" show-button-bar="false">
+	          <span class="input-group-btn">
+	            <button type="button" class="btn btn-default" ng-click="acc.openStart()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+	          </span>
+	        </p>
+    	</div>
+	</div>
+	<div class="row row-centered">
+		<div class="col-lg-8 col-centered">
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+					  <th class="text-center" colspan="4">
+					  	<h2>
+							Pico Infraestructura Urbana S.A. de C.V.
+					  	</h2>
+					  </th>
+					</tr>
+					<tr>
+					  <th class="text-center" colspan="4">
+					  	<h3>
+							Estado de Resultados
+					  	</h3>
+					  </th>
+					</tr>
+					<tr>
+						<th class="text-center" colspan="4">Unidad de Negocio: Construccion
+					  	</th>
+					</tr>
+					<tr>
+						<th></th>
+						<th class="text-center" colspan="2">Fecha Inicio: Enero 2016</th>
+						<th class="text-center">Fecha Fin: Junio 2016</th>
+						<th></th>
+					</tr>
+					</thead>
+					<tbody>
+						<table class="table table-striped">
+						     <thead>
+						        <tr>
+						            <th style="width:20px"><i ng-click="acc.loadItems()" class="fa fa-refresh blueicon"></i></th>
+						            <th style="width:20px">#</th>
+						            <th style="width:auto">Cuenta</th>
+						            <th style="width:auto;text-align:right">Importe</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						    	<tr ng-repeat="data in acc.statusAcc" ng-include="'tree_item.html'"></tr>
+						    </tbody>
+						    
+						</table>
+					</tbody>
+				</table>
+
+			</div><!-- col-lg -->
+<!-- 			<table class="table table-striped table-condensed">
+				<thead>
+					<th>Cuenta</th>
+					<th>Total</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="ac in acc.statusAcc | filter:{parent_id:null}" ng-init="parentIndex = $index">
+						<td>{{ac.account}} -> {{ac.balance | currency : "$" : 2}}</td>
+						<td align="right">
+							<table class="table table-striped table-condensed">
+								<thead>
+									<th>Cuenta</th>
+								</thead>
+								<tbody>
+									<tr ng-repeat="child in ac.childs">
+										<td>{{child.account}} -> {{child.balance | currency : "$" : 2}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table> -->
+			<!-- 
+			<table class="table table-striped">
+			  <thead>
+			    <tr>
+			      <th class="text-center" colspan="5">Pico Infraestructura Urbana S.A. de C.V.</th>
+			    </tr>
+			    <tr>
+			    	<th></th>
+					<th class="text-center" colspan="2">Fecha Inicio: {{acc.openedPrj.start_date}}</th>
+					<th class="text-center">Fecha Fin: {{acc.openedPrj.end_date}}</th>
+					<th></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td class="text-center" colspan="5"><b>Obra: </b> {{acc.openedPrj.full_name}}</td>
+			    </tr>
+			    <tr>
+					<td></td>
+			    	<td colspan="4">Monto Contratado:</td>
+			    </tr>
+			    <tr>
+					<td></td>
+			    	<td colspan="4"><b>{{acc.openedPrj.budget | currency : "$" : 2}}</b></td>
+			    </tr>
+			    <tr>
+			    	<td colspan="4"><b>Ingresos:</b></td>
+			    	<td>
+			    		<b>{{acc.totalIncome.balance | currency : "$" : 2}}</b>
+			    	</td>
+			    </tr>
+			    <tr>
+			      <td colspan="5">
+
+					<uib-accordion>
+						<uib-accordion-group heading="Ingreso de Obra:">
+							<table class="table table-striped table-condensed">
+								<thead>
+									<th>Cuenta</th>
+									<th>Total</th>
+								</thead>
+									<tr ng-repeat="item in acc.income">
+										<td>{{item.account}}</td>
+										<td>{{item.balance | currency : "$ " : 2}}</td>
+									</tr>
+								<tbody>
+									
+								</tbody>
+							</table>
+
+						</uib-accordion-group>
+					</uib-accordion>
+			      </td>
+			    </tr>
+			    <tr>
+			      <td></td>
+			      <td></td>
+			      <td colspan="2">Avance Obra año actual:</td>
+			      <td>{{acc.openedPrj.income | currency : "$" : 2}}</td>
+			    </tr>
+			    <tr>
+			    	<td colspan="4"><b>Egresos:</b></td>
+			    	<td><b>{{acc.totalOutcome.balance | currency : "$" : 2}}</b></td>
+			    </tr>
+			    <tr>
+			      <td colspan="5">
+
+					<uib-accordion>
+						<uib-accordion-group heading="{{acc.totalOutcome.top_account_name}}:">
+							<table class="table table-striped table-condensed">
+								<thead>
+									<th>Cuenta</th>
+									<th>Total</th>
+								</thead>
+								<tbody>
+									<tr ng-repeat="reg in acc.outcome" ng-click="acc.getSubDetails(reg.account)">
+										<td>{{reg.account}}</td>
+										<td align="right">{{reg.balance | currency : "$" : 2}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</uib-accordion-group>
+					</uib-accordion>
+			      </td>
+			    </tr>
+			    <tr>
+			    	<td><b>Balance:</b></td>
+			    	<td colspan="3"></td>
+			    	<td><b>
+			    		<span ng-class="{'color-red': acc.totalIncome.balance < acc.totalOutcome.balance}">
+			    		{{acc.totalIncome.balance - acc.totalOutcome.balance | currency : "$" : 2	}}</span></b>
+			    		
+			    	</td>
+			    </tr>
+			    
+			  </tbody>
+			</table> -->
+		</div>
+
+	</div><!-- row -->
+</div><!-- content container -->

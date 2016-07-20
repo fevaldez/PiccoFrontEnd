@@ -1,0 +1,44 @@
+<div id="divMasterDetailWrapper" style="position:relative">
+
+    <!-- First, we have our left-hand list of Customer names --> 
+    <div id="divMasterView">
+        <div id="{{customer.id}}" class="cssOneCompanyRecord" ng-class="{cssCompanySelectedRecord: Customer.id == project.selectedCustomer}" ng-repeat="Customer in project.listOfCustomers" ng-click="project.selectCustomer(Customer);">
+            <div class="cssCompanyName">{{Customer.Proyecto}}</div>
+            <div class="cssCompanyCity">{{Customer.fechaInicio | dateToISO | date : 'dd/MMM/yyyy'}}</div>
+            <div class="cssCustomerID">{{Customer.monto}}</div>
+            <!-- <img src='/images/icnOffice.png' title="This is a tooltip for the company: {{Customer.CompanyName}}" class="cssCustomerIcon" /> -->
+        </div>
+    </div>
+
+    <!-- Then, we have our right-hand panel, showing one Customer's orders --> 
+    <div id="divDetailView">
+        <!-- Get AngularJS to create one DIV for each Order that this Customer has made. --> 
+        <div id="Order_{{Order.id}}" class="cssOneOrderRecord">
+            <!-- Each Order will have a header bar, with Order ID and date. --> 
+            <div class="cssOneOrderHeader">
+                <div class="cssOrderID">Obra: {{project.listOfOrders.Proyecto}}</div>
+                <br>
+                <div class="cssOrderDate">Fecha de Inicio: {{project.listOfOrders.fechaInicio | dateToISO | date : 'dd/MMM/yyyy'}}</div>
+                <!-- <div class="cssOrderDate">Fecha Final: {{project.listOfOrders.fechaFinal | dateToISO | date : 'dd/MMM/yyyy'}}</div> -->
+            </div>
+
+            <!-- AngularJS will create one DIV for each Product in this particular Order --> 
+            <!-- <div class="cssOneProductRecord" ng-repeat='Product in Order.ProductsInBasket' ng-class="{ cssProductEven: (($index%2) == 0), cssProductOdd: ($index%2)}">
+                <div class="cssOneProductQty">{{Product.Quantity}}</div>
+                <div class="cssOneProductName">{{Product.ProductName}}</div>
+                <div class="cssOneProductPrice">@ {{Product.UnitPrice | currency}}</div>
+                <div class="cssOneProductSubtotal">{{Product.UnitPrice * Product.Quantity | currency}}</div>
+            </div> -->
+
+            <!-- The fiddly bit - calculating totals for this Order --> 
+            <div class="cssOneOrderTotal">
+                <div class="cssOneProductQty">
+                    Ingresos: {{project.listOfOrders.monto*0.68 | currency : "$" : 2}}
+                </div>
+                <div class="cssOneProductSubtotal"> 
+                    Egresos: {{project.listOfOrders.monto*0.22  | currency : "$" : 2}}
+                </div>
+            </div>
+        </div><!-- Order_{{Order.id}} -->
+    </div><!-- divDetailView -->
+</div>

@@ -1,0 +1,167 @@
+<div class="content container full-height">
+	<div class="row">
+      <div class="col-lg-4 col-md-5">
+      	<div class="col-lg-6 col-md-6 zero-padding">
+      		<p>Fecha Inicio:</p>
+	        <p class="input-group">
+	          <input type="text" class="form-control no-padding" uib-datepicker-popup ng-model="dt" is-open="prjList.popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close">
+	          <span class="input-group-btn">
+	            <button type="button" class="btn btn-default" ng-click="prjList.open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+	          </span>
+	        </p>
+      	</div><!-- sub col -->
+      	<div class="col-lg-6 col-md-6 zero-padding">
+      		<p>Fecha Fin:</p>
+	        <p class="input-group">
+	          <input type="text" class="form-control" uib-datepicker-popup ng-model="endDate" is-open="prjList.ppEndDate.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close">
+	          <span class="input-group-btn">
+	            <button type="button" class="btn btn-default" ng-click="prjList.openEndDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+	          </span>
+	        </p>
+      	</div>
+      </div>
+	</div><!-- row -->
+
+	<div class="row full-height">
+		<div class="col-lg-4 col-md-5 col-xs-12 full-height">
+			<div class="well" id="well2">
+				<div class="list-group list-special">
+					<div class="thumb my-repeat-animation" ng-repeat="curProj in prjList.projects  | dateRange:dt:endDate track by curProj.id" ng-click="prjList.openPrj(curProj);prjList.active = curProj.id;">
+						<a href="" class="list-group-item clearfix" ng-class="{'active' : curProj.id == prjList.active}">
+						 	<h6 class="list-group-item-heading">
+						 		<span class="fa fa-industry"></span> {{curProj.full_name}}
+							</h6>
+							<p class="list-group-item-text">
+								{{curProj.start_date | dateToISO | date : 'dd/MMM/yyyy' }} - {{curProj.end_date | dateToISO | date : 'dd/MMM/yyyy' }}
+							</p>
+							<!-- <span class="badge">New</span>
+						  <span class="pull-right">
+						    <button class="btn btn-xs btn-info">CCS</button>
+						    <button class="btn btn-xs btn-warning">
+						      <span class="glyphicon glyphicon-trash"></span>
+						    </button>
+						  </span> -->
+						</a>
+					</div>
+				</div><!-- list-group -->
+			</div><!-- well -->
+		</div><!-- col -->
+
+		<div class="col-lg-8 col-md-7 col-xs-12">
+		<div class="thumb">
+			<div class="row">
+
+      <ng-switch on="prjList.anyItemOpen()">
+       <div ng-switch-when="true">
+
+			<div class="table-responsive">
+				<table class="table table-striped">
+				  <thead>
+				    <tr>
+				      <th class="text-center" colspan="5">Pico Infraestructura Urbana S.A. de C.V.</th>
+				    </tr>
+				    <tr>
+				    	<th></th>
+						<th class="text-center" colspan="2">Fecha Inicio: {{prjList.openedPrj.start_date}}</th>
+						<th class="text-center">Fecha Fin: {{prjList.openedPrj.end_date}}</th>
+						<th></th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <td class="text-center" colspan="5"><b>Obra: </b> {{prjList.openedPrj.full_name}}</td>
+				    </tr>
+				    <tr>
+						<td></td>
+				    	<td colspan="4">Monto Contratado:</td>
+				    </tr>
+				    <tr>
+						<td></td>
+				    	<td colspan="4"><b>{{prjList.openedPrj.budget | currency : "$" : 2}}</b></td>
+				    </tr>
+				    <tr>
+				    	<td colspan="4"><b>Ingresos:</b></td>
+				    	<td>
+				    		<b>{{prjList.totalIncome.balance | currency : "$" : 2}}</b>
+				    	</td>
+				    </tr>
+				    <tr>
+				      <td colspan="5">
+
+						<uib-accordion>
+							<uib-accordion-group heading="Ingreso de Obra:">
+								<!-- <div ng-repeat="item in prjList.projectIncome">{{item.income_date}}</div> -->
+								<table class="table table-striped table-condensed">
+									<thead>
+										<th>Cuenta</th>
+										<th>Total</th>
+									</thead>
+										<tr ng-repeat="item in prjList.income">
+											<td>{{item.account}}</td>
+											<td>{{item.balance | currency : "$ " : 2}}</td>
+										</tr>
+									<tbody>
+										
+									</tbody>
+								</table>
+
+							</uib-accordion-group>
+						</uib-accordion>
+				      </td>
+				    </tr>
+				    <tr>
+				      <td></td>
+				      <td></td>
+				      <td colspan="2">Avance Obra año actual:</td>
+				      <td>{{prjList.openedPrj.income | currency : "$" : 2}}</td>
+				    </tr>
+				    <tr>
+				    	<td colspan="4"><b>Egresos:</b></td>
+				    	<!-- <td><b>{{prjList.openedPrj.outcome | currency : "$" : 2}}</b></td> -->
+				    	<td><b>{{prjList.totalOutcome.balance | currency : "$" : 2}}</b></td>
+				    </tr>
+				    <tr>
+				      <td colspan="5">
+
+						<uib-accordion>
+							<uib-accordion-group heading="{{prjList.totalOutcome.top_account_name}}:">
+								<!-- <div ng-repeat="item in prjList.projectIncome">{{item.income_date}}</div> -->
+								<table class="table table-striped table-condensed">
+									<thead>
+										<th>Cuenta</th>
+										<th>Total</th>
+									</thead>
+										<tr ng-repeat="reg in prjList.outcome" ng-click="prjList.getSubDetails(reg.account)">
+											<td>{{reg.account}}</td>
+											<td align="right">{{reg.balance | currency : "$" : 2}}</td>
+										</tr>
+									<tbody>
+										
+									</tbody>
+								</table>
+							</uib-accordion-group>
+						</uib-accordion>
+				      </td>
+				    </tr>
+				    <tr>
+				    	<td><b>Balance:</b></td>
+				    	<td colspan="3"></td>
+				    	<td><b>
+				    		<span ng-class="{'color-red': prjList.totalIncome.balance < prjList.totalOutcome.balance}">
+				    		{{prjList.totalIncome.balance - prjList.totalOutcome.balance | currency : "$" : 2	}}</span></b>
+				    		
+				    	</td>
+				    </tr>
+				    
+				  </tbody>
+				</table>
+			</div>
+
+       </div>
+      </ng-switch>
+			</div><!-- row -->
+		</div><!-- thumb -->
+		</div><!-- col -->
+
+	</div><!-- row -->
+</div><!-- content container -->

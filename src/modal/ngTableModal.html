@@ -1,0 +1,28 @@
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" ng-click="close('Cancel')" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">{{title}}</h4>
+        </div>
+        <div class="modal-body">
+          {{body}}
+
+          <div class="table-responsive">
+            <table ng-table="tableParams" class="table table-condensed table-striped table-hover no-padding table-slim" show-filter="false" show="true">              
+                <tr ng-repeat="acc in $data">
+                  <td title="'Cuenta'" filter="{ Proyecto: 'text'}" sortable="'curProj.name'">
+                          {{acc.account_name || 'total' | titleCase }}</td>
+                  <td title="'Importe'" filter="{ start_date: 'text'}" sortable="'curProj.start_date'" align="right">
+                          {{acc.balance | currency : "$" : 2}}</td>
+                </tr>
+            </table>
+          </div><!-- table-responsive -->
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" ng-click="close(false)" class="btn btn-primary" data-dismiss="modal">No</button>
+          <button type="button" ng-click="close(true)" class="btn btn-danger" data-dismiss="modal">Yes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
