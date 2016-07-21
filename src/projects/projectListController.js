@@ -91,6 +91,7 @@
                     var i_l3 =[];
                     var o_l3 =[];
                     res.reduce(function(income, entry){
+                        //Top parent accounts (ROLLUP Summary)
                         if (
                             entry.parent_id == null &&
                             entry.parent_account == null &&
