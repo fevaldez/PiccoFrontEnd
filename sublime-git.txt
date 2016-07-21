@@ -1,0 +1,7 @@
+
+[remote "origin"]
+	url = https://{username}:{password}@github.com/{username}/project.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+	command: git remote add origin https://{username}:{password}@github.com/{username}/project.git
+	Note: if your password contains '@' character use '%40' instead of that...
