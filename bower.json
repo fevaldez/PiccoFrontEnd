@@ -7,6 +7,7 @@
     "Felipe Valdes <pipexz@gmail.com>"
   ],
   "contributors": [
+    "Felipe Valdes <pipexz@gmail.com>"
   ],
   "main": "index.html",
   "license": "MIT",
@@ -39,6 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fevaldez/PiccoFrontEnd"
+    "url": "https://github.com/fevaldez/PiccoFrontEnd.git"
   }
 }
